@@ -121,3 +121,36 @@ console.log(qryParams.firstName); //returns Clark
 //Local install sirve para isntalar los paquetes para mi aplicación solamente.
 // Example npm install <package_name>
 //Global install afecta a todos los proyectos, todos usarían la misma versión. Examnle npm isntall -g <package_name>
+
+//http/createServer	
+const http = require('http');
+const requestListener = function(req, res) {
+  res.writeHead(200);
+  res.end('Hello, World!');
+}
+const port = 8080;
+const server = http.createServer(requestListener);
+console.log('server listening on port: '+ port);
+server.listen(port);
+
+new Date()
+module.exports.getDate = function getDate() {
+    let aestTime = new Date().toLocaleString("en-US", {timeZone: "Australia/Brisbane"});
+    return aestTime;
+}
+
+import()
+// addTwoNos.mjs
+function addTwo(num) {
+  return num + 4;
+}
+export { addTwo };
+// app.js
+import { addTwo } from './addTwoNos.mjs';
+// Prints: 8
+console.log(addTwo(4));
+
+require()
+module.exports = 'Hello Programmers';
+let msg = require('./messages.js');
+console.log(msg);
