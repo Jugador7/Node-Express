@@ -22,3 +22,8 @@ methCall.then(
 )
 
 //Se puede usar axios para manejar respuestas HTTP
+
+//PROMISES: An object in JavaScript that acts as a placeholder for an asynchronous task that is yet to be completed. 
+//It is the object that is returned from an asynchronous method. 
+//When you define a promise object in your script, instead of returning a value immediately, it returns a promise. 
+//The promise has three states, which are pending, fulfilled, and rejected.
