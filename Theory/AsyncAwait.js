@@ -113,4 +113,15 @@ connectToURL('https://api.publicapis.org/entries').catch(err => {
 
 //AXIOS PACKAGE: The axios package wraps promises around HTTP requests.  It returns a promise object. 
 
+//EXAMPLE:
+
+const axios = require('axios').default;
+let url = "some remote url"
+async function asyncCall() {
+  console.log('calling');
+  const result = await axios.get(url);
+  console.log(result.data);
+}
+asyncCall();
+
 
