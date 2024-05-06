@@ -58,5 +58,18 @@ exports.current = function (location, resultCallback){
   });.end()
 }
 
+//CALLBACKS: 	Callbacks are methods that are passed as parameters. 
+//They are invoked within the method to which they are passed as a parameter, conditionally or unconditionally. 
+//We use callbacks with a promise to process the response or errors.
+
+//EXAMPLE:
+
+//function(res) and function(err) are the anonymous callback functions
+axios.get(url).then(function(res) {
+    console.log(res);
+}).catch(function(err) {
+    console.log(err)
+})
+
 
                                                 
