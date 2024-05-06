@@ -110,3 +110,7 @@ connectToURL('https://api.publicapis.org/entries').catch(err => {
 });
 
 //You can only await a promise inside an async method. This is because await blocks the thread. This will defeat the primary purpose. So the function within which an await is used HAS TO BE async.
+
+//AXIOS PACKAGE: The axios package wraps promises around HTTP requests.  It returns a promise object. 
+
+
