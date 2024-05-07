@@ -1,0 +1,7 @@
+- Serverless Framework
+- Lodash ( dealing with collections and arrays, finding and sorting)
+- Axios (RESTful APIs, GET, PUTS and POSTS(Callbacks and Promises))
+- Middlewares using Express specially when using auth tokens and JWT
+- NPM to talk to DBs. 
+
+
