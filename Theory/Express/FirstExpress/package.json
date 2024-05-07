@@ -1,0 +1,13 @@
+{
+    "name": "first",
+    "version": "1.0.0",
+    "description": "Try your first Express API",
+    "main": "index.js",
+    "dependencies": {
+        "express": "4.x"
+    },
+    "scripts": {
+        "start": "node mynodeserver.js"
+    }
+}
+
