@@ -46,3 +46,32 @@ if(uname === "user" && pwd ==="password"){
     .json({message: "Invalid username and/or password"});
 };
 
+//Define GET API method
+
+myapp.get("/employees",(req,res)=>{
+  let tkn = req.header('Authorization');
+  if(!tkn) return
+    res.status(401).send("No Token");
+    if(tkn.startsWith('Bearer')){
+      tokenValue = tkn.slice(7, tkn.length).trimLeft();
+});
+
+//Verify JWT
+
+const verificationStatus =>
+  jsonwebtoken.verify(tokenValue, "aVeryVerySecretString");
+    if(verificationStatus.user=== "user"){               
+      return res.status(200).json({message: "Access Succesful to Employee Endpoint"});
+    }
+return res
+
+//Listen
+.
+.status(401)
+.json({message:"Please login to access this resource"});
+
+myapp.listen(5000,()=>{
+  console.log("API Server is localhost:5000");
+});
+
+
