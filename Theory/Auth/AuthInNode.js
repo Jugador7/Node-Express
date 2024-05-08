@@ -16,9 +16,33 @@ myapp.listen(5000,()=>{
 })
 
 //para ejecutar el API guarda el archivo y nombralo apiServer.js luego ejecuta:
-
 //node apiServer.js
 
 //Para verificar que el endpoint no puede ser accedido a menos que el usuario esté autorizado, ejecuta esta cURL
+//curl -i localhost:5000/employee
 
-//curl -i localhost:5000/emplyee
+//Para generar el JWT se usa el paquete jsonwebtoken npm
+//npm isntall -save jsonwebtoken 
+//poner este token en los requerimientos
+
+const jsonwebtoken = require("jsonwebtoken";)
+
+const JWT_SECRET = "aVeryVerySecretString";
+
+//Definir método POST al API
+myapp.use(express.json());
+myapp.post("/signin",(req,res)=>{
+  const{uname,pwd} = req.body;
+})
+
+//Retunr the JWT Token 
+
+if(uname === "user" && pwd ==="password"){
+  return res.json({
+    token: jsonwebtoken.sign({user:"user"},JWT_SECRET),
+  });
+  return res
+    .status(401)
+    .json({message: "Invalid username and/or password"});
+};
+
