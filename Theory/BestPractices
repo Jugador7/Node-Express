@@ -1,0 +1,57 @@
+Separar la estructura así
+
+1. node_modules
+    Contiene los modilos y paquetes de la app
+    Se crea automáticamente despues de correr el npm_install
+2. config
+    Conexión a bases de datos
+    Variables de entorno
+    Archivos de credenciales que incluyen las llaves API para servicios externos. 
+3. models
+    Modelos de datos
+      Estos especifican el tipo de datos almacenados defindo por una librería ORM (Object relational mapping)
+4. routes (Siempre poner nombres en las rutas, nunca poner verbos.)
+    Rutas a todas las entidades. 
+    Un archivo para cada recurso. 
+5. views(opcional)
+    Contiene plantillas
+    Las plantillas escriben HTML, CSS y JavaScriptn dinámico para el cliente. 
+6. public(opcional)
+    Contiene contenido estático como imágenes, css y JS. 
+    Es útil tener una subcarpeta para cada tipo de contenido. 
+
+
+Archivos a tener:
+app.js (archivo de configuración principa)
+routes.js (locación central para acceder a todas las rutas. importa todos los archivos de la mcarpeta rutas y los exporta como un único modulo a app.js)
+        Sirve para tener un solo punto de entrada para todas las rutas de la app. 
+package.json
+        Metadatos para manejar dependencias. 
+
+
+Black-box texting
+- Usar mucha, con su móduilo que se llama SuperTest. 
+
+API AUTHENTICATION
+- Usar JWT stateless authentication. 
+
+API Documentation
+- Que alguien pueda usar esta app y sea feliz
+    (API Blueprint - apiblueprint.org)
+    (Swagger - swagger.io)
+
+Using npm
+- usar npm init para inicializar
+- usar --save o --save-dev cuando instalamos para que siempre se lleven las dependencias
+- nunca pushees un repositorio de node_modules y siempre usa npm para isntalar. 
+
+Nombres:
+minusculas para archivos
+camelCase para variables
+separa-con-guiones a los npm_modules
+usa CamelCase cuando uses require(myCase)
+
+
+
+
+
